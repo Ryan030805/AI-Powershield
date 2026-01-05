@@ -1,0 +1,18 @@
+#Python Cache
+__pycache__/
+*.pyc 
+
+# Virtual environment
+venv/
+
+# Hugging Face cache
+.cache/
+
+# Environment variables
+.env
+
+# Node modules (future frontend)
+node_modules/
+
+# Logs
+*.log
