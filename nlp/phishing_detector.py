@@ -29,19 +29,3 @@ def detect_message(text: str):
         "reason": "Detected using fine-tuned phishing model"
     }
 
-# +++++++++++++++++++++++++++++++++++++++++++++++++++++
-# Local Testing #
-"""
-if __name__ == "__main__":
-    samples = [
-        "Your account is suspended. Click the link immediately.",
-        "Hey, are we meeting tomorrow for the project discussion?",
-        "Urgent! Verify your bank details now.",
-        "Please find the attached report."
-    ]
-
-    for text in samples:
-        print(f"Text: {text}")
-        print("Result:", detect_message(text))
-        print("-" * 60)
-"""
