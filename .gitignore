@@ -16,3 +16,16 @@ node_modules/
 
 # Logs
 *.log
+
+# Trained ML models (do NOT push)
+nlp/phishing-model/
+nlp/phishing-model_v1.zip
+nlp/*.zip
+
+# IDE / Editor files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
