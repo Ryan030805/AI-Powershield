@@ -1,6 +1,6 @@
 #Python Cache
 __pycache__/
-*.pyc 
+.pyc 
 
 # Virtual environment
 venv/
@@ -15,12 +15,12 @@ venv/
 node_modules/
 
 # Logs
-*.log
+.log
 
 # Trained ML models 
 nlp/phishing-model/
 nlp/phishing-model_v1.zip
-nlp/*.zip
+nlp/.zip
 
 # IDE / Editor files
 .vscode/
