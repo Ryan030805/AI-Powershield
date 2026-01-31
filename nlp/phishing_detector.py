@@ -2,7 +2,7 @@ from transformers import pipeline
 import torch
 from functools import lru_cache
 
-# Load your fine-tuned phishing model
+
 classifier = pipeline(
     "text-classification",
     model="nlp/phishing-model",

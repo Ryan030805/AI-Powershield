@@ -11,13 +11,13 @@ venv/
 # Environment variables
 .env
 
-# Node modules (future frontend)
+# Node modules 
 node_modules/
 
 # Logs
 *.log
 
-# Trained ML models (do NOT push)
+# Trained ML models 
 nlp/phishing-model/
 nlp/phishing-model_v1.zip
 nlp/*.zip
