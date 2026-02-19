@@ -37,35 +37,35 @@ Setup Instructions
 
 Frontend:
 
-HTML5
-CSS3
-Vanilla JavaScript
+- HTML5
+- CSS3
+- Vanilla JavaScript
 
 AI & Backend (Local Inference Engine):
 
-Python 3.10+
-FastAPI
-Uvicorn
+- Python 3.10+
+- FastAPI
+- Uvicorn
 
 Machine Learning & NLP:
 
-DistilBERT (Transformer-based phishing detection)
-HuggingFace Transformers
-PyTorch
-spaCy (linguistic analysis)
-Scikit-learn
+- DistilBERT (Transformer-based phishing detection)
+- HuggingFace Transformers
+- PyTorch
+- spaCy (linguistic analysis)
+- Scikit-learn
 
 Security Analysis Modules:
 
-URL Infrastructure Analysis (tldextract, validators, WHOIS)
-Credential Exposure Detection (Regex + Luhn Algorithm)
-Behavioral Social-Engineering Detection (Hybrid NLP engine)
+- URL Infrastructure Analysis (tldextract, validators, WHOIS)
+- Credential Exposure Detection (Regex + Luhn Algorithm)
+- Behavioral Social-Engineering Detection (Hybrid NLP engine)
 
 File Inspection:
 
-PyPDF2 (PDF scanning)
-python-docx (document inspection)
-BeautifulSoup (HTML form detection)
+- PyPDF2 (PDF scanning)
+- python-docx (document inspection)
+- BeautifulSoup (HTML form detection)
 
 📦 Installation
 ================
