@@ -79,27 +79,27 @@ cd AI-PowerShield
 2. Create Virtual Environment
 python -m venv venv
 
-Activate it:
+        Activate it:
 
-Windows
+            - Windows
+                venv\Scripts\activate
 
-venv\Scripts\activate
+            - Mac/Linux
 
-Mac/Linux
+                source venv/bin/activate
 
-source venv/bin/activate
 3. Install Dependencies
-pip install -r requirements.txt
+    pip install -r requirements.txt
 
 4. Install spaCy Language Model
 
-(This step is required — the project will not run without it)
+    (This step is required — the project will not run without it)
 
-python -m spacy download en_core_web_sm
+    python -m spacy download en_core_web_sm
 
 5. Download Trained Models
 
-Follow the instructions in the Required Model Download section at the top of this README.
+    Follow the instructions in the Required Model Download section at the top of this README.
 
 
 🚀 How to Use
