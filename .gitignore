@@ -1,31 +1,67 @@
-#Python Cache
-__pycache__/
-.pyc 
+#PYTHON
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.py[cod]
+*.so
 
-# Virtual environment
+# Virtual environments
 venv/
+.venv/
+env/
+ENV/
 
-# Hugging Face cache
-.cache/
-
-# Environment variables
-.env
-
-# Node modules 
-node_modules/
-
-# Logs
-.log
-
-# Trained ML models 
+#ML MODELS
+# Your trained models
 nlp/phishing-model/
-nlp/phishing-model_v1.zip
-nlp/.zip
+nlp/phishing-model-old/
+nlp/prompt_model/
+*.zip
 
-# IDE / Editor files
+# Model weights
+*.pt
+*.pth
+*.bin
+*.ckpt
+*.onnx
+*.safetensors
+*.h5
+*.pkl
+*.pickle
+
+#HUGGINGFACE / TORCH CACHE
+.cache/
+**/.cache/
+**/huggingface/
+**/torch/
+hf_cache/
+
+#DATA / TEMP
+*.log
+*.tmp
+temp_*
+
+#TEST FILES
+test_*.py
+
+# ---------------- NODE / OLD BACKEND ----------------
+node_modules/
+backend/
+package.json
+package-lock.json
+server.js
+
+# ---------------- ENV ----------------
+.env
+.env.*
+
+# ---------------- IDE ----------------
 .vscode/
 .idea/
+*.swp
 
-# OS files
+# ---------------- OS ----------------
 .DS_Store
 Thumbs.db
+desktop.ini

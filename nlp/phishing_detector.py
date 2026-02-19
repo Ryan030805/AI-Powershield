@@ -1,31 +1,49 @@
-from transformers import pipeline
 import torch
+import torch.nn.functional as F
+from transformers import DistilBertTokenizerFast, DistilBertForSequenceClassification
 from functools import lru_cache
 
+# Load model once at startup
+MODEL_PATH = "nlp/phishing-model"
 
-classifier = pipeline(
-    "text-classification",
-    model="nlp/phishing-model",
-    tokenizer="nlp/phishing-model",
-    device=0 if torch.cuda.is_available() else -1
-)
+tokenizer = DistilBertTokenizerFast.from_pretrained(MODEL_PATH)
+model = DistilBertForSequenceClassification.from_pretrained(MODEL_PATH)
+model.eval()
+
 
 @lru_cache(maxsize=256)
 def detect_message(text: str):
     """
     Detect phishing using fine-tuned transformer model
+    Returns REAL phishing probability (not predicted-class confidence)
     """
 
     text = text.strip()
 
-    with torch.no_grad():
-        result = classifier(text)[0]
+    inputs = tokenizer(
+        text,
+        return_tensors="pt",
+        truncation=True,
+        padding=True,
+        max_length=128
+    )
 
-    label = "Phishing" if result["label"] == "LABEL_1" else "Safe"
+    with torch.no_grad():
+        outputs = model(**inputs)
+
+    # convert logits -> probabilities
+    probs = F.softmax(outputs.logits, dim=1)
+
+    safe_prob = probs[0][0].item()
+    phishing_prob = probs[0][1].item()
+
+    label = "Phishing" if phishing_prob >= 0.5 else "Safe"
 
     return {
         "label": label,
-        "confidence": round(float(result["score"]), 4),
-        "reason": "Detected using fine-tuned phishing model"
+        "confidence": round(phishing_prob, 4),   # always phishing probability
+        "safe_probability": round(safe_prob, 4),
+        "reason": "Transformer semantic analysis"
     }
+
 
