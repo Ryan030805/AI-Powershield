@@ -32,24 +32,6 @@ Setup Instructions
 
 - Move the extracted files into their respective folders.
 
-Your final structure must be:
-
-nlp/
-├── phishing-model/
-│   ├── config.json
-│   ├── tokenizer.json
-│   ├── tokenizer_config.json
-│   ├── special_tokens_map.json
-│   └── model.safetensors
-│
-├── prompt_model/
-│   ├── config.json
-│   ├── tokenizer.json
-│   ├── tokenizer_config.json
-│   ├── special_tokens_map.json
-│   └── model.safetensors
-
-
 🛠️ Tech Stack
 ==============
 
