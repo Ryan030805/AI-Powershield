@@ -83,10 +83,13 @@ File Inspection:
 Follow the steps below to run AI-PowerShield locally.
 
 1. Clone the Repository
+'''
         git clone https://github.com/Ryan030805/AI-PowerShield.git
         cd AI-PowerShield
+'''
 
 2. Create Virtual Environment
+'''
         python -m venv venv
 
             Activate it:
@@ -96,9 +99,12 @@ Follow the steps below to run AI-PowerShield locally.
 
                 - Mac/Linux
                     source venv/bin/activate
+'''
 
 3. Install Dependencies
+'''
         pip install -r requirements.txt
+'''
 
 4. Install spaCy Language Model
 
