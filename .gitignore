@@ -13,13 +13,10 @@ env/
 ENV/
 
 #ML MODELS
-# Your trained models
-nlp/phishing-model/
-nlp/phishing-model-old/
-nlp/prompt_model/
-*.zip
+nlp/*model*/
+nlp/*onnx*/
 
-# Model weights
+# model weight files
 *.pt
 *.pth
 *.bin
@@ -29,6 +26,9 @@ nlp/prompt_model/
 *.h5
 *.pkl
 *.pickle
+
+# archives
+*.zip
 
 #HUGGINGFACE / TORCH CACHE
 .cache/
@@ -65,3 +65,4 @@ server.js
 .DS_Store
 Thumbs.db
 desktop.ini
+

@@ -24,17 +24,9 @@ class MessageInput(BaseModel):
 
 @app.post("/predict")
 async def predict(data: MessageInput):
-
     text = data.message
-
     risk_report = evaluate_message_risk(text)
-
-    return {
-        "risk_score": risk_report["risk_score"],
-        "risk_level": risk_report["risk_level"],
-        "reasons": risk_report["reasons"],
-        "module_findings": risk_report["module_findings"]
-    }
+    return risk_report
 
 @app.post("/scan_attachment")
 async def scan_attachment(file: UploadFile = File(...)):

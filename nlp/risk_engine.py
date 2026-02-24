@@ -1,6 +1,7 @@
 from nlp.phishing_detector import detect_message
 from nlp.sensitive_detector import analyze_sensitive_data
 from nlp.url_scanner import scan_message_for_urls
+from nlp.prompt_detection import detect_prompt_injection
 
 
 #Risk thresholds
@@ -125,8 +126,11 @@ def evaluate_message_risk(text):
     
     result = detect_message(text)
     probability = float(result["confidence"])
+    phishing_latency = result.get("latency_ms", None)
 
-    
+    prompt_result = detect_prompt_injection(text)
+    prompt_latency = prompt_result.get("latency_ms", None)
+
     if probability >= 0.15:
         if behavior_triggered:
             score += probability * 30
@@ -152,8 +156,12 @@ def evaluate_message_risk(text):
     risk_level = get_risk_level(score)
 
     return {
-        "risk_score": round(score, 2),
-        "risk_level": risk_level,
-        "reasons": list(dict.fromkeys(reasons)),
-        "module_findings": module_findings
+    "risk_score": round(score, 2),
+    "risk_level": risk_level,
+    "reasons": list(dict.fromkeys(reasons)),
+    "module_findings": module_findings,
+    "model_performance": {
+        "phishing_model_latency_ms": phishing_latency,
+        "prompt_model_latency_ms": prompt_latency
+        }
     }
