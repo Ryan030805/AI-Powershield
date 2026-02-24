@@ -1,20 +1,46 @@
 🛡️ AI-PowerShield
 ==================
+AI-PowerShield is a multi-layer phishing detection and online safety platform designed to analyze suspicious messages, links, and attachments using a hybrid AI + security analysis engine.
 
-AI-PowerShield is a multi-layer phishing detection and online safety platform that analyzes suspicious messages, links, and attachments using a hybrid AI + security-analysis engine.
+Instead of relying on a single classifier, the system combines:
 
-Instead of relying on a single classifier, the system combines transformer-based language understanding with infrastructure inspection and behavioral analysis to produce interpretable security decisions and a unified risk score.
+transformer-based language understanding
 
-==================
-AI-PowerShield does not run the transformer models directly in PyTorch during inference.
+- URL infrastructure inspection
 
-The trained DistilBERT classifiers were exported to ONNX Runtime to create a production-style inference pipeline.
-ONNX converts the neural network into a compiled computation graph, allowing faster execution and lower latency on CPU hardware.
+- credential-exposure detection
 
-This optimization reduces response time significantly compared to standard PyTorch inference and makes the system suitable for real-time analysis.
+- behavioral social-engineering analysis
 
-The repository contains convert_to_onnx_amd.py, which demonstrates how the original PyTorch models were exported to ONNX format.
-Users do not need to run this script — pre-exported models are provided via the download links.
+- to generate an interpretable security decision and a unified risk score rather than a simple safe/phishing label.
+
+**Accelerated AI Inference (ONNX Runtime)**
+==========================================
+
+AI-PowerShield does not run the transformer models directly using PyTorch during inference.
+
+The trained DistilBERT classifiers were exported to ONNX Runtime to simulate a production-grade deployment pipeline.
+
+ONNX converts the neural network into a compiled computation graph, enabling:
+
+- faster execution
+
+- lower latency
+
+- CPU-only compatibility
+
+- real-time message analysis
+
+Compared to standard PyTorch inference, this significantly reduces response time and makes the tool usable as an interactive security scanner.
+
+**The repository also includes:**
+'''
+The repository also includes:
+'''
+
+This script demonstrates how the original PyTorch models were exported into ONNX format.
+    - Users do NOT need to run this script.
+    - Pre-exported runtime models are provided via the download links for easy setup.
 
 ⚠️ Required Model Download (Important)
 ======================================
