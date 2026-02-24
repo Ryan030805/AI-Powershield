@@ -34,13 +34,15 @@ ONNX converts the neural network into a compiled computation graph, enabling:
 Compared to standard PyTorch inference, this significantly reduces response time and makes the tool usable as an interactive security scanner.
 
 **The repository also includes:**
-'''
-The repository also includes:
-'''
+```
+convert_to_onnx_amd.py
+```
 
 This script demonstrates how the original PyTorch models were exported into ONNX format.
+```
     - Users do NOT need to run this script.
     - Pre-exported runtime models are provided via the download links for easy setup.
+```
 
 ⚠️ Required Model Download (Important)
 ======================================
