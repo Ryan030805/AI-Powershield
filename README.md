@@ -83,28 +83,29 @@ File Inspection:
 Follow the steps below to run AI-PowerShield locally.
 
 1. Clone the Repository
-'''
-        git clone https://github.com/Ryan030805/AI-PowerShield.git
-        cd AI-PowerShield
-'''
+```
+git clone https://github.com/Ryan030805/AI-PowerShield.git
+cd AI-PowerShield
+```
 
 2. Create Virtual Environment
-'''
-        python -m venv venv
+```
+python -m venv venv
+```
 
             Activate it:
 
-                - Windows
+                - **Windows**
                     venv\Scripts\activate
 
-                - Mac/Linux
+                - **Mac/Linux**
                     source venv/bin/activate
 '''
 
 3. Install Dependencies
-'''
-        pip install -r requirements.txt
-'''
+```
+pip install -r requirements.txt
+```
 
 4. Install spaCy Language Model
 
@@ -128,7 +129,7 @@ Follow the steps below to run AI-PowerShield locally.
 Troubleshooting
 ===============
 
-Backend fails to start / model not found
+**Backend fails to start / model not found**
 
 Check folder placement:
 
