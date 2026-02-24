@@ -4,7 +4,7 @@ AI-PowerShield is a multi-layer phishing detection and online safety platform de
 
 Instead of relying on a single classifier, the system combines:
 
-transformer-based language understanding
+- transformer-based language understanding
 
 - URL infrastructure inspection
 
@@ -12,7 +12,7 @@ transformer-based language understanding
 
 - behavioral social-engineering analysis
 
-- to generate an interpretable security decision and a unified risk score rather than a simple safe/phishing label.
+to generate an interpretable security decision and a unified risk score rather than a simple safe/phishing label.
 
 **Accelerated AI Inference (ONNX Runtime)**
 ==========================================
